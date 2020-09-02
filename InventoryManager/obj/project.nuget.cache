@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ijquBqzsGH1M7Wd4f6n5l7d8sDyz0/9me499Msggg9Sx/x1zrF4PURbfiLBAuoZG+5/4h3OrBtGCQm5uMMBerg==",
+  "success": true,
+  "projectFilePath": "D:\\MIS_COSAS\\MyProjects\\InventoryManager\\InventoryManager\\InventoryManager.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Mati\\.nuget\\packages\\sqlite\\3.13.0\\sqlite.3.13.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,14 @@
+D:\MIS_COSAS\MyProjects\InventoryManager\InventoryManager\bin\Debug\netcoreapp3.1\InventoryManager.exe
+D:\MIS_COSAS\MyProjects\InventoryManager\InventoryManager\bin\Debug\netcoreapp3.1\InventoryManager.deps.json
+D:\MIS_COSAS\MyProjects\InventoryManager\InventoryManager\bin\Debug\netcoreapp3.1\InventoryManager.runtimeconfig.json
+D:\MIS_COSAS\MyProjects\InventoryManager\InventoryManager\bin\Debug\netcoreapp3.1\InventoryManager.runtimeconfig.dev.json
+D:\MIS_COSAS\MyProjects\InventoryManager\InventoryManager\bin\Debug\netcoreapp3.1\InventoryManager.dll
+D:\MIS_COSAS\MyProjects\InventoryManager\InventoryManager\bin\Debug\netcoreapp3.1\InventoryManager.pdb
+D:\MIS_COSAS\MyProjects\InventoryManager\InventoryManager\obj\Debug\netcoreapp3.1\InventoryManager.csprojAssemblyReference.cache
+D:\MIS_COSAS\MyProjects\InventoryManager\InventoryManager\obj\Debug\netcoreapp3.1\InventoryManager.Form1.resources
+D:\MIS_COSAS\MyProjects\InventoryManager\InventoryManager\obj\Debug\netcoreapp3.1\InventoryManager.csproj.GenerateResource.cache
+D:\MIS_COSAS\MyProjects\InventoryManager\InventoryManager\obj\Debug\netcoreapp3.1\InventoryManager.AssemblyInfoInputs.cache
+D:\MIS_COSAS\MyProjects\InventoryManager\InventoryManager\obj\Debug\netcoreapp3.1\InventoryManager.AssemblyInfo.cs
+D:\MIS_COSAS\MyProjects\InventoryManager\InventoryManager\obj\Debug\netcoreapp3.1\InventoryManager.dll
+D:\MIS_COSAS\MyProjects\InventoryManager\InventoryManager\obj\Debug\netcoreapp3.1\InventoryManager.pdb
+D:\MIS_COSAS\MyProjects\InventoryManager\InventoryManager\obj\Debug\netcoreapp3.1\InventoryManager.genruntimeconfig.cache
