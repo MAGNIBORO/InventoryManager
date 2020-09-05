@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
+using SQLiteDemo;
 
 namespace InventoryManager
 {
@@ -19,7 +21,6 @@ namespace InventoryManager
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
         }
 
 
@@ -30,7 +31,11 @@ namespace InventoryManager
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Database IMDatabase = new Database("InventoryManagerDB");
 
+            IMDatabase.AddTable("Products");
+
+            IMDatabase.CloseConnection();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

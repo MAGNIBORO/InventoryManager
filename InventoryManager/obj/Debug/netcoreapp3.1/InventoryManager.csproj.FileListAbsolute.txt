@@ -12,3 +12,14 @@ D:\MIS_COSAS\MyProjects\InventoryManager\InventoryManager\obj\Debug\netcoreapp3.
 D:\MIS_COSAS\MyProjects\InventoryManager\InventoryManager\obj\Debug\netcoreapp3.1\InventoryManager.dll
 D:\MIS_COSAS\MyProjects\InventoryManager\InventoryManager\obj\Debug\netcoreapp3.1\InventoryManager.pdb
 D:\MIS_COSAS\MyProjects\InventoryManager\InventoryManager\obj\Debug\netcoreapp3.1\InventoryManager.genruntimeconfig.cache
+D:\MIS_COSAS\MyProjects\InventoryManager\InventoryManager\obj\Debug\netcoreapp3.1\InventoryManager.csproj.CoreCompileInputs.cache
+D:\MIS_COSAS\MyProjects\InventoryManager\InventoryManager\bin\Debug\netcoreapp3.1\System.Data.SQLite.dll
+D:\MIS_COSAS\MyProjects\InventoryManager\InventoryManager\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\netstandard2.0\SQLite.Interop.dll
+D:\MIS_COSAS\MyProjects\InventoryManager\InventoryManager\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\netstandard2.1\SQLite.Interop.dll
+D:\MIS_COSAS\MyProjects\InventoryManager\InventoryManager\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\netstandard2.0\SQLite.Interop.dll
+D:\MIS_COSAS\MyProjects\InventoryManager\InventoryManager\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\netstandard2.1\SQLite.Interop.dll
+D:\MIS_COSAS\MyProjects\InventoryManager\InventoryManager\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\netstandard2.0\SQLite.Interop.dll
+D:\MIS_COSAS\MyProjects\InventoryManager\InventoryManager\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\netstandard2.1\SQLite.Interop.dll
+D:\MIS_COSAS\MyProjects\InventoryManager\InventoryManager\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\netstandard2.0\SQLite.Interop.dll
+D:\MIS_COSAS\MyProjects\InventoryManager\InventoryManager\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\netstandard2.1\SQLite.Interop.dll
+D:\MIS_COSAS\MyProjects\InventoryManager\InventoryManager\obj\Debug\netcoreapp3.1\InventoryManager.csproj.CopyComplete
