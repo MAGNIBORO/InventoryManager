@@ -12,41 +12,36 @@ using SQLiteDemo;
 
 namespace InventoryManager
 {
-    public partial class Form1 : Form
+    public partial class Menu : Form
     {
-        public Form1()
+        public Menu()
         {
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Database IMDatabase = new Database("InventoryManagerDB");
+            IMDatabase.AddTable("Products");
         }
 
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
             Database IMDatabase = new Database("InventoryManagerDB");
 
-            IMDatabase.AddTable("Products");
+            AddMenu PromptNewItem = new AddMenu();
+            PromptNewItem.ShowDialog();
+        //    IMDatabase.AddRow("Products", );
 
             IMDatabase.CloseConnection();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            try { 
 
-            }
-            catch
-            {
-
-            }
         }
     }
 }

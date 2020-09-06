@@ -3,6 +3,7 @@ using System.IO;
 using System.Collections.Generic;
 using System.Text;
 using System.Data.SQLite;
+using System.Windows.Forms;
 
 namespace SQLiteDemo
 {
@@ -21,12 +22,21 @@ namespace SQLiteDemo
 
         public bool AddTable(string tableName)
         {
+            int res = 0;
             var cmd = new SQLiteCommand(myConnection);
 
             cmd.CommandText = "CREATE TABLE " + tableName + @"(id INTEGER PRIMARY KEY,
                     name TEXT, price REAL, quantity INT)";
-            
-            return (cmd.ExecuteNonQuery() != 0);
+
+            try
+            {
+                res = cmd.ExecuteNonQuery();
+            }
+            catch(SQLiteException e)
+            {
+            }
+
+            return (res != 0);
         }
 
         public bool AddRow(string tableName, string name, float price, int quantity)
