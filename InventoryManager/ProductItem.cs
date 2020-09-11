@@ -6,38 +6,38 @@ namespace InventoryManager
 {
     public class ProductItem
     {
-    private string name;
-    private float price;
-    private int quantity;
+        public string name { get; set; }
+        public float price { get; set; }
+        public int quantity { get; set; }
 
         public ProductItem()
         { 
         }
-            public ProductItem(string name, float price, int quantity)
+        public ProductItem(string Name, float Price, int Quantity)
         {
-            this.name = name;
-            this.price = price;
-            this.quantity = quantity;
+            name = Name;
+            price = Price;
+            quantity = Quantity;
         }
 
-        public void EditFields(string name, float price, int quantity)
+        public void EditFields(string Name, float Price, int Quantity)
         {
-            this.name = name;
-            this.price = price;
-            this.quantity = quantity;
+            name = Name;
+            price = Price;
+            quantity = Quantity;
         }
 
         public string GetName()
         {
-            return this.name;
+            return name;
         }
         public float GetPrice()
         {
-            return this.price;
+            return price;
         }
         public int GetQuantity()
         {
-            return this.quantity;
+            return quantity;
         }
     }
 }

@@ -15,6 +15,7 @@ namespace InventoryManager
     public partial class Menu : Form
     {
         private Database IMDatabase;
+        private List<ProductItem> DatabaseList;
         public Menu()
         {
             InitializeComponent();
@@ -24,19 +25,32 @@ namespace InventoryManager
         {
             this.IMDatabase = new Database("InventoryManagerDB");
             IMDatabase.AddTable("Products");
+            this.UpdateList("Products");
+            dataGridView1.DataSource = this.DatabaseList;
+            dataGridView1.Refresh();
+        }
+
+        private void UpdateList(string tablename)
+        {
+            this.DatabaseList = this.IMDatabase.GetProductListFromTable(tablename);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             AddMenu PromptNewItem = new AddMenu();
             PromptNewItem.GetNewItem(this.IMDatabase, "Products");
-
-            this.IMDatabase.CloseConnection();
+            this.UpdateList("Products");
+            dataGridView1.Refresh();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void Menu_SizeChanged(object sender, EventArgs e)
+        {
+            dataGridView1.Refresh();
         }
     }
 }

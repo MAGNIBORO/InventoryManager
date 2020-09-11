@@ -52,9 +52,24 @@ namespace SQLiteDatabase
         {
             var cmd = new SQLiteCommand(myConnection);
 
-            cmd.CommandText = "DELETE FROM {tableName} WHERE NAME = '{name}'";
+            cmd.CommandText = $"DELETE FROM {tableName} WHERE NAME = '{name}'";
 
             return (cmd.ExecuteNonQuery() != 0);
+        }
+
+        public List<ProductItem> GetProductListFromTable(string tableName)
+        {
+            var ret = new List<ProductItem>();
+            var cmd = new SQLiteCommand($"SELECT * FROM {tableName}", myConnection);
+            var reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                ProductItem item = new ProductItem(reader.GetString(1), reader.GetFloat(2), reader.GetInt32(3));
+                ret.Add(item);
+            }
+
+            return ret;
         }
 
         public void OpenConnection()
