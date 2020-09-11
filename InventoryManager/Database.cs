@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data.SQLite;
 using System.Windows.Forms;
+using InventoryManager;
 
-namespace SQLiteDemo
+namespace SQLiteDatabase
 {
-    class Database
+    public class Database
     {
         public SQLiteConnection myConnection;
         public Database(string databaseName)
@@ -39,11 +40,10 @@ namespace SQLiteDemo
             return (res != 0);
         }
 
-        public bool AddRow(string tableName, string name, float price, int quantity)
+        public bool AddRow(string tableName, ProductItem item)
         {
             var cmd = new SQLiteCommand(myConnection);
-
-            cmd.CommandText = "INSERT INTO {tablename}(name, price, quantity) VALUES('{name}',{price},{quantity})";
+            cmd.CommandText = $"INSERT INTO {tableName}(name, price, quantity) VALUES('{item.GetName()}',{item.GetPrice()},{item.GetQuantity()})";
 
             return (cmd.ExecuteNonQuery() != 0);
         }

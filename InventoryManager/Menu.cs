@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
-using SQLiteDemo;
+using SQLiteDatabase;
 
 namespace InventoryManager
 {
     public partial class Menu : Form
     {
+        private Database IMDatabase;
         public Menu()
         {
             InitializeComponent();
@@ -21,22 +22,16 @@ namespace InventoryManager
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Database IMDatabase = new Database("InventoryManagerDB");
+            this.IMDatabase = new Database("InventoryManagerDB");
             IMDatabase.AddTable("Products");
         }
 
-
-        
-
         private void button1_Click(object sender, EventArgs e)
         {
-            Database IMDatabase = new Database("InventoryManagerDB");
-
             AddMenu PromptNewItem = new AddMenu();
-            PromptNewItem.ShowDialog();
-        //    IMDatabase.AddRow("Products", );
+            PromptNewItem.GetNewItem(this.IMDatabase, "Products");
 
-            IMDatabase.CloseConnection();
+            this.IMDatabase.CloseConnection();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
