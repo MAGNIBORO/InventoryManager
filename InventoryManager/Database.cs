@@ -20,6 +20,21 @@ namespace SQLiteDatabase
             myConnection.Open();
 
         }
+        public void OpenConnection()
+        {
+            if (myConnection.State != System.Data.ConnectionState.Open)
+            {
+                myConnection.Open();
+            }
+        }
+
+        public void CloseConnection()
+        {
+            if (myConnection.State != System.Data.ConnectionState.Closed)
+            {
+                myConnection.Clone();
+            }
+        }
 
         public bool AddTable(string tableName)
         {
@@ -48,7 +63,7 @@ namespace SQLiteDatabase
             return (cmd.ExecuteNonQuery() != 0);
         }
 
-        public bool DeleteRowByName(string tableName, string name)
+        public bool DeleteRowsByName(string tableName, string name)
         {
             var cmd = new SQLiteCommand(myConnection);
 
@@ -57,6 +72,20 @@ namespace SQLiteDatabase
             return (cmd.ExecuteNonQuery() != 0);
         }
 
+        public int AlreadyHas(string tablename, string columnname, string itemname)
+        {
+            var cmd = new SQLiteCommand(myConnection);
+            cmd.CommandText = $"SELECT * FROM {tablename} WHERE {columnname} = '{itemname}'";
+            var reader = cmd.ExecuteReader();
+            int numberOfItems = 0;
+
+            while (reader.Read())
+            {
+                numberOfItems++;
+            }
+
+            return numberOfItems;
+        }
         public List<ProductItem> GetProductListFromTable(string tableName)
         {
             var ret = new List<ProductItem>();
@@ -72,20 +101,5 @@ namespace SQLiteDatabase
             return ret;
         }
 
-        public void OpenConnection()
-        {
-            if (myConnection.State != System.Data.ConnectionState.Open)
-            {
-                myConnection.Open();
-            }
-        }
-
-        public void CloseConnection()
-        {
-            if (myConnection.State != System.Data.ConnectionState.Closed)
-            {
-                myConnection.Clone();
-            }
-        }
     }
 }

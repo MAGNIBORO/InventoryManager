@@ -41,7 +41,31 @@ namespace InventoryManager
             PromptNewItem.GetNewItem(this.IMDatabase, "Products");
             this.UpdateList("Products");
         }
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            var selectedRows = dataGridView1.Rows.GetRowCount(DataGridViewElementStates.Selected);
 
+            if (selectedRows == 0)
+            {
+                MessageBox.Show("Seleccione al menos un elemento para eliminar");
+                return;
+            }
+
+            DialogResult dialogResult = MessageBox.Show("Esta seguro de eliminar los Elementos Seleccionados?", "Eliminar Elementos", MessageBoxButtons.YesNo);
+             if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
+
+            for (int i = 0; i < selectedRows; i++)
+            {
+                int index = dataGridView1.SelectedRows[i].Index;
+                string itemname = dataGridView1.Rows[index].Cells[0].Value.ToString();
+                this.IMDatabase.DeleteRowsByName("products", itemname);
+            }
+
+            this.UpdateList("products");
+        }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -51,5 +75,6 @@ namespace InventoryManager
         {
             this.UpdateList("Products");
         }
+
     }
 }

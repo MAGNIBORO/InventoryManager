@@ -44,8 +44,13 @@ namespace InventoryManager
                 MessageBox.Show("Nombre Invalido");
                 return;
             }
+            if(this.DatabaseToFill.AlreadyHas("products", "name", textBox1.Text) > 0)
+            {
+                MessageBox.Show("Articulo ya existente");
+                return;
+            }
 
-            try{ItemPrice = float.Parse(textBox2.Text);}
+            try {ItemPrice = float.Parse(textBox2.Text);}
             catch (System.FormatException)
             {
                 MessageBox.Show("Precio Invalido");
